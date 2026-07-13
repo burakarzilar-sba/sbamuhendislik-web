@@ -1,0 +1,29 @@
+SBA MÜHENDİSLİK SEO DÜZENLEMELERİ
+Tarih: 11.07.2026
+
+Yapılanlar:
+- Ana sayfa ve tüm ana sayfalarda SEO başlıkları ve meta açıklamaları yenilendi.
+- Eski "SBA Elektronik" ifadeleri görünür alanlarda "SBA Mühendislik" olarak düzeltildi.
+- Sayfa bazlı canonical URL tanımları eklendi.
+- Open Graph paylaşım başlıkları, açıklamaları ve URL'leri iyileştirildi.
+- LocalBusiness / ProfessionalService ve WebSite JSON-LD yapılandırılmış verileri eklendi.
+- robots.txt ayarları güncellendi; sepet sayfası indeks dışı bırakıldı.
+- sitemap.xml URL'leri trailingSlash yapısına göre düzenlendi.
+- Ana sayfa H1 ve tanıtım metni Antalya hedef kelimelerine göre geliştirildi.
+- Googlebot görsel/snippet izinleri tanımlandı.
+
+Yayın adımları:
+1. Bu klasörü mevcut proje klasörünüzle değiştirin veya değişen dosyaları kopyalayın.
+2. PowerShell'de proje klasöründe çalıştırın:
+   Remove-Item .next -Recurse -Force -ErrorAction SilentlyContinue
+   Remove-Item out -Recurse -Force -ErrorAction SilentlyContinue
+   npm install
+   npm run build
+3. out klasörünün İÇERİĞİNİ Hostinger public_html içine yükleyin ve üzerine yazın.
+4. Google Search Console'da sitemap adresini gönderin:
+   https://sbamuhendislik.com/sitemap.xml
+5. Ana sayfa için URL Denetimi > Dizine eklenmesini iste işlemini kullanın.
+
+Not:
+Bu çalışma ortamında arşiv içindeki node_modules eksik çıktığı için build doğrulaması burada tamamlanamadı.
+Kaynak kod düzenlemeleri tamamlandı; kendi bilgisayarınızda npm install sonrası npm run build çalıştırılmalıdır.

@@ -1,0 +1,21 @@
+GÜVENLİK
+1) Daha önce paylaşılan ABACUSAI_API_KEY değerini Abacus/ReAI panelinden iptal edin veya yenileyin.
+2) ReAI/hosteddb veritabanı şifresini yenileyin veya veritabanını kapatın. Statik sitede DATABASE_URL artık kullanılmıyor.
+3) GitHub içinde .env dosyası varsa silin. GitHub repo ana ekranında .env görünmemeli.
+4) Hostinger panelinde dosya izinleri: klasörler 755, dosyalar 644 olmalı.
+5) public_html içinde .env, .git, prisma, node_modules gibi klasör/dosyalar olmamalı.
+
+İLETİŞİM FORMU
+- Form artık /api/contact.php dosyasına gönderim yapar.
+- Mail alıcısı: info@sbamuhendislik.com
+- Değiştirmek için public/api/contact.php içinde $to satırını değiştirin.
+- PHP mail Hostinger tarafında çalışmazsa Hostinger mail ayarları veya SMTP ile düzenleme gerekir.
+
+OTOMATİK YAYIN
+- .github/workflows/deploy-hostinger.yml dosyası eklendi.
+- GitHub repo Settings > Secrets and variables > Actions bölümüne şu 3 secret eklenmeli:
+  FTP_SERVER
+  FTP_USERNAME
+  FTP_PASSWORD
+- Bu bilgileri kimseyle paylaşmayın; sadece GitHub Secrets içine kendiniz girin.
+- main branch'e push yapınca site otomatik build olur ve public_html içine yüklenir.
