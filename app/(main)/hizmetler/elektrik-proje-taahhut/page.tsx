@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -97,15 +97,29 @@ const processSteps = [
 export default function ElektrikProjeTaahhutPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[#1a1a2e] py-20 text-white md:py-28">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary blur-3xl" />
-        </div>
+      {/* ANA KAPAK BÖLÜMÜ */}
+      <section className="relative flex min-h-[620px] items-center overflow-hidden text-white">
+  <Image
+    src="/images/hizmetler/proje-taahhut/elektrik-proje-taahhut-uygulamalari-antalya.png"
+    alt="SBA Mühendislik elektrik proje ve taahhüt uygulamaları"
+    fill
+    priority
+    className="object-cover"
+    sizes="100vw"
+  />
 
-        <div className="relative mx-auto grid max-w-[1200px] items-center gap-10 px-4 lg:grid-cols-2">
+        <div className="absolute inset-0 bg-[#111126]/10" />
+
+        <div className="absolute inset-0 bg-[#111126]/45" />
+
+<div className="absolute inset-0 bg-gradient-to-r from-[#111126]/60 via-[#111126]/35 to-transparent" />
+
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
+
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 py-20 md:py-28">
           <FadeIn>
-            <div>
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm">
+            <div className="max-w-2xl">
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/20 px-4 py-2 text-sm backdrop-blur-sm">
                 <Zap className="h-4 w-4 text-primary" />
                 Elektrik Mühendisliği ve Taahhüt
               </div>
@@ -114,7 +128,7 @@ export default function ElektrikProjeTaahhutPage() {
                 Elektrik Proje ve Taahhüt Hizmetleri
               </h1>
 
-              <p className="mb-8 max-w-xl text-lg leading-relaxed text-gray-300">
+              <p className="mb-8 max-w-xl text-lg leading-relaxed text-gray-200 md:text-xl">
                 Proje aşamasından saha uygulamasına, test ve devreye almadan
                 anahtar teslim çözümlere kadar güvenli, kaliteli ve
                 sürdürülebilir elektrik mühendisliği hizmetleri sunuyoruz.
@@ -132,7 +146,7 @@ export default function ElektrikProjeTaahhutPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full border-white/30 bg-transparent text-white hover:bg-white hover:text-[#1a1a2e] sm:w-auto"
+                    className="w-full border-white/40 bg-black/20 text-white backdrop-blur-sm hover:bg-white hover:text-[#1a1a2e] sm:w-auto"
                   >
                     Referanslarımız
                   </Button>
@@ -140,62 +154,53 @@ export default function ElektrikProjeTaahhutPage() {
               </div>
             </div>
           </FadeIn>
-
-          <FadeIn>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-              <Image
-                src="/images/hizmetler/proje-taahhut/elektrik-proje-taahhut-uygulamalari-antalya.png"
-                alt="Antalya elektrik proje ve taahhüt uygulamaları"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </FadeIn>
         </div>
       </section>
 
+      {/* PROJE VE TAAHHÜT AÇIKLAMASI */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[1000px] px-4">
           <FadeIn>
-            <div className="prose prose-lg max-w-none">
-              <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">
+            <div>
+              <h2 className="mb-6 font-display text-3xl font-bold tracking-tight md:text-4xl">
                 Proje ve Taahhüt Neden Önemlidir?
               </h2>
 
-              <p className="leading-relaxed text-muted-foreground">
-                Elektrik proje ve taahhüt uygulamaları; teknik detayların,
-                saha koşullarının, yürürlükteki standartların ve işletme
-                ihtiyaçlarının birlikte değerlendirilmesini gerektiren
-                kapsamlı bir süreçtir.
-              </p>
+              <div className="space-y-5">
+                <p className="leading-relaxed text-muted-foreground">
+                  Elektrik proje ve taahhüt uygulamaları; teknik detayların,
+                  saha koşullarının, yürürlükteki standartların ve işletme
+                  ihtiyaçlarının birlikte değerlendirilmesini gerektiren
+                  kapsamlı bir süreçtir.
+                </p>
 
-              <p className="leading-relaxed text-muted-foreground">
-                Projede belirlenen teknik detayların sahada doğru, güvenli ve
-                eksiksiz şekilde uygulanması; tesis güvenliği, sistem
-                sürekliliği, enerji verimliliği ve yatırım maliyetlerinin
-                korunması açısından büyük önem taşır.
-              </p>
+                <p className="leading-relaxed text-muted-foreground">
+                  Projede belirlenen teknik detayların sahada doğru, güvenli
+                  ve eksiksiz şekilde uygulanması; tesis güvenliği, sistem
+                  sürekliliği, enerji verimliliği ve yatırım maliyetlerinin
+                  korunması açısından büyük önem taşımaktadır.
+                </p>
 
-              <p className="leading-relaxed text-muted-foreground">
-                SBA Mühendislik olarak elektrik projelerinin hazırlanmasından
-                saha uygulamalarına, malzeme seçiminden montaj ve devreye alma
-                süreçlerine kadar tüm aşamalarda mühendislik esaslarına dayalı
-                çözümler sunuyoruz.
-              </p>
+                <p className="leading-relaxed text-muted-foreground">
+                  SBA Mühendislik olarak elektrik projelerinin
+                  hazırlanmasından saha uygulamalarına, malzeme seçiminden
+                  montaj ve devreye alma süreçlerine kadar tüm aşamalarda
+                  mühendislik esaslarına dayalı çözümler sunuyoruz.
+                </p>
 
-              <p className="leading-relaxed text-muted-foreground">
-                Sahadaki uygulama tecrübemizi dijital proje ve mühendislik
-                çalışmalarımızla birleştirerek oteller, fabrikalar,
-                endüstriyel tesisler, depolama alanları, ticari işletmeler ve
-                kamu yapıları için ihtiyaca özel çözümler geliştiriyoruz.
-              </p>
+                <p className="leading-relaxed text-muted-foreground">
+                  Sahadaki uygulama tecrübemizi dijital proje ve mühendislik
+                  çalışmalarımızla birleştirerek oteller, fabrikalar,
+                  endüstriyel tesisler, depolama alanları, ticari işletmeler
+                  ve kamu yapıları için ihtiyaca özel çözümler geliştiriyoruz.
+                </p>
+              </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
+      {/* ÇALIŞMA SÜRECİ */}
       <section className="bg-muted/40 py-16 md:py-24">
         <div className="mx-auto max-w-[1200px] px-4">
           <FadeIn>
@@ -241,6 +246,7 @@ export default function ElektrikProjeTaahhutPage() {
         </div>
       </section>
 
+      {/* HİZMET KAPSAMI */}
       <section className="py-16 md:py-24">
         <div className="mx-auto grid max-w-[1200px] gap-12 px-4 lg:grid-cols-2">
           <FadeIn>
@@ -266,7 +272,10 @@ export default function ElektrikProjeTaahhutPage() {
                     className="flex items-start gap-3 rounded-lg border p-3"
                   >
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-sm leading-relaxed">{service}</span>
+
+                    <span className="text-sm leading-relaxed">
+                      {service}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -294,7 +303,10 @@ export default function ElektrikProjeTaahhutPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-sm text-gray-200">{item}</span>
+
+                    <span className="text-sm text-gray-200">
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -303,43 +315,48 @@ export default function ElektrikProjeTaahhutPage() {
         </div>
       </section>
 
+      {/* REFERANSLAR */}
       <section className="bg-muted/40 py-16 md:py-24">
-        <div className="mx-auto max-w-[1200px] px-4">
-          <FadeIn>
-            <div className="mb-12 text-center">
-              <Factory className="mx-auto mb-5 h-10 w-10 text-primary" />
+  <div className="mx-auto max-w-[1200px] px-4">
+    <FadeIn>
+      <div className="mb-12 text-center">
+        <Factory className="mx-auto mb-5 h-10 w-10 text-primary" />
 
-              <h2 className="mb-4 font-display text-3xl font-bold tracking-tight md:text-4xl">
-                Proje ve Uygulama Referanslarımız
-              </h2>
+        <h2 className="mb-4 font-display text-3xl font-bold tracking-tight md:text-4xl">
+          Proje ve Uygulama Referanslarımız
+        </h2>
 
-              <p className="mx-auto max-w-3xl text-muted-foreground">
-                Farklı sektörlerde ve farklı teknik ihtiyaçlara sahip birçok
-                projede mühendislik ve uygulama çalışmaları gerçekleştirdik.
-              </p>
-            </div>
-          </FadeIn>
+        <p className="mx-auto max-w-3xl text-muted-foreground">
+          Farklı sektörlerde ve farklı teknik ihtiyaçlara sahip birçok
+          projede mühendislik ve uygulama çalışmaları gerçekleştirdik.
+        </p>
+      </div>
+    </FadeIn>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {references.map((reference) => (
-              <FadeIn key={reference}>
-                <div className="flex h-full items-center gap-3 rounded-xl border bg-background p-5 shadow-sm">
-                  <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
-                  <span className="text-sm font-medium leading-relaxed">
-                    {reference}
-                  </span>
-                </div>
-              </FadeIn>
-            ))}
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {references.map((reference) => (
+        <FadeIn key={reference}>
+          <div className="flex h-full items-center gap-3 rounded-xl border bg-background p-5 shadow-sm">
+            <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
+
+            <span className="text-sm font-medium leading-relaxed">
+              {reference}
+            </span>
           </div>
+        </FadeIn>
+      ))}
+    </div>
 
-          <p className="mt-8 text-center text-sm text-muted-foreground">
-            Belirtilen tesisler, gerçekleştirdiğimiz çalışmaların bir bölümünü
-            oluşturmaktadır.
-          </p>
-        </div>
-      </section>
+    <div className="mx-auto mt-10 max-w-4xl rounded-xl border border-primary/20 bg-background px-6 py-5 text-center shadow-sm">
+      <p className="text-base font-semibold leading-relaxed text-foreground md:text-lg">
+        Burada belirtilen tesisler ve firmalar, gerçekleştirdiğimiz proje ve
+        uygulama çalışmalarının yalnızca bir bölümünü oluşturmaktadır.
+      </p>
+    </div>
+  </div>
+</section>
 
+      {/* İLETİŞİM ÇAĞRISI */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[1000px] px-4">
           <FadeIn>
@@ -351,9 +368,9 @@ export default function ElektrikProjeTaahhutPage() {
               </h2>
 
               <p className="mx-auto mb-8 max-w-2xl leading-relaxed text-gray-300">
-                Elektrik proje çizimi, elektrik taahhüt uygulamaları ve anahtar
-                teslim elektrik mühendisliği hizmetleri için bizimle iletişime
-                geçebilirsiniz.
+                Elektrik proje çizimi, elektrik taahhüt uygulamaları ve
+                anahtar teslim elektrik mühendisliği hizmetleri için bizimle
+                iletişime geçebilirsiniz.
               </p>
 
               <Link href="/iletisim">
